@@ -190,7 +190,6 @@ namespace API.Controllers.V1
                     FirstName = currentUser.FirstName,
                     UserName = currentUser.UserName,
                     PhoneNumber = currentUser.Phone,
-                    HasPowerBiReport = true,
                     Permissions = roles.Select(m => new Permission()
                     {
                         RoleId = m.Id,

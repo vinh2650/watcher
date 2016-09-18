@@ -155,11 +155,6 @@ namespace API.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// has PowerBI report
-        /// </summary>
-        public bool HasPowerBiReport { get; set; }
-
-        /// <summary>
         /// library of user
         /// </summary>
         public LibraryModel Library { get; set; }

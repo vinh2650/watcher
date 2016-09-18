@@ -6,7 +6,6 @@ using Autofac.Integration.WebApi;
 using Common.Logs;
 using Core.Domain.Authentication;
 using Data;
-using Membership;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security.DataProtection;
 using Owin;
@@ -64,8 +63,6 @@ namespace API.App_Start
             builder.RegisterType<WorkContext>().As<IWorkContext>().InstancePerLifetimeScope();
 
             //user store
-            builder.RegisterType<EfUserStore>().As<IUserStore<User>>().InstancePerDependency();
-            builder.RegisterType<EfUserManager>().As<UserManager<User>>().InstancePerDependency();
             var dataProtectionProvider = new MachineKeyProtectionProvider();
             builder.Register<IDataProtectionProvider>(cc => dataProtectionProvider).InstancePerDependency();
             //business entity
